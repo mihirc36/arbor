@@ -184,7 +184,7 @@
       asia:{title:"Asia", p:{stiffness:500}, source:_sources.nations},
       europe:{title:"Europe", p:{stiffness:300}, source:_sources.nations},
       mideast:{title:"Middle East", p:{stiffness:500}, source:_sources.nations},
-      risk:{title:"Risk", p:{stiffness:400}, source:_sources.trie}
+      risk:{title:"Risk", p:{stiffness:400}, source:_sources.risk}
     }
     
     var that = {
