@@ -206,7 +206,8 @@
         return false
       },
       selectMap:function(map_id){
-        $.getJSON("maps/"+map_id+".json",function(data){
+        //$.getJSON("maps/"+map_id+".json",function(data){
+        $.getJSON("maps/trie.json",function(data){
           // load the raw data into the particle system as is (since it's already formatted correctly for .merge)
           var nodes = data.nodes
           $.each(nodes, function(name, info){
