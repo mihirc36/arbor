@@ -21,13 +21,15 @@
     var _current = null // will be the id of the doc if it's been saved before
     var _editing = false // whether to undim the Save menu and prevent navigating away
     var _failures = null
-    
+    var _lorem = "; some example nodes\nhello {color:red, label:HELLO}\nworld {color:orange}\n\n; some edges\nhello -> world {color:yellow}\nfoo -> bar {weight:5}\nbar -> baz {weight:2}"
+        
     var that = {
+      
       init:function(){
         
         $(window).resize(that.resize)
         that.resize()
-        that.updateLayout(Math.max(1, $(window).width()-340))
+        that.updateLayout(Math.max(1, $(window).width()))
 
         return that
       },
@@ -40,8 +42,7 @@
       },
       
       updateGraph:function(e){
-        var src_txt = _code.val()
-        var network = parse(src_txt)
+        var network = parse(_lorem)
         $.each(network.nodes, function(nname, ndata){
           if (ndata.label===undefined) ndata.label = nname
         })
@@ -61,7 +62,6 @@
         _canvas.width = canvW
         _canvas.height = canvH
         sys.screenSize(canvW, canvH)
-                  
       },
       
       grabbed:function(e){
