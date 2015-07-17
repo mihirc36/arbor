@@ -30,7 +30,6 @@
       init:function(){
         
         $(window).resize(that.resize)
-        that.updateGraph()
         that.resize()
         that.updateLayout(Math.max(1, $(window).width()))
         return that
