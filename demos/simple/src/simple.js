@@ -7,6 +7,7 @@
   trace = arbor.etc.trace
   objmerge = arbor.etc.objmerge
   objcopy = arbor.etc.objcopy
+  var parse = Parseur().parse
 
   var Simple = function(elt){
     var dom = $(elt)
