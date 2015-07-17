@@ -13,6 +13,7 @@
     var dom = $(elt)
 
     sys = arbor.ParticleSystem(2600, 512, 0.5)
+    sys.renderer = Renderer("#viewport") // our newly created renderer will have its .init() method called shortly by sys...
     sys.screenPadding(20)
     
     var _canvas = dom.find('#viewport').get(0)
