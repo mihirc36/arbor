@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Simple graph </title>
+</head>
+<body>
+
+<div id="halfviz">
+    <canvas id="viewport" width="800" height="600"></canvas>
+    <div id="editor">
+      <div class="io">
+        <div class="ctrl"><a href="#" class="new">clear</a><a class="examples" href="#">examples <span></span></a></div>
+        <ul class="dialog"></ul>
+        </div>
+      <textarea id="code"></textarea>  
+    </div>
+    <div id="grabber"></div>
+  </div>  
+  
+  <script src="../_/jquery-1.6.1.min.js"></script>
+  <script src="../_/jquery.address-1.4.min.js"></script>
+  <script src="../../lib/arbor.js"></script>
+  <script src="../_/graphics.js"></script>
+
+  <!-- the main driver code: start here -->
+  <script src="src/simple.js"></script> 
+
+</body>
+</html>
