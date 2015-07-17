@@ -39,6 +39,16 @@
         sys.renderer.redraw()
       },
       
+      updateGraph:function(e){
+        var src_txt = _code.val()
+        var network = parse(src_txt)
+        $.each(network.nodes, function(nname, ndata){
+          if (ndata.label===undefined) ndata.label = nname
+        })
+        sys.merge(network)
+        _updateTimeout = null
+      },
+      
       updateLayout:function(split){
         var w = dom.width()
         var h = _grabber.height()
