@@ -36,7 +36,7 @@
       
       resize:function(){        
         var w = $(window).width() - 40
-        var x = w - _ed.width()
+        var x = w
         that.updateLayout(x)
         sys.renderer.redraw()
       },
